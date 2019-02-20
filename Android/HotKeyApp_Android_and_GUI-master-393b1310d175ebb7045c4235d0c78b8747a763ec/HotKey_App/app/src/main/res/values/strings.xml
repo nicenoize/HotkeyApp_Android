@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HotKeyApp</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="notConnected">No connection. \n Please connect to server</string>
+    <string name="serverConnect">Trying to connect to Server</string>
+    <string name="errorConnection">Couldn\'t connect to Host. Please make sure the server is running</string>
+    <string name="errorWifi">Please connect to server\'s WiFi Network</string>
+    <string name="aboutTitle">(C) HotKey App V1.0 2018</string>
+</resources>

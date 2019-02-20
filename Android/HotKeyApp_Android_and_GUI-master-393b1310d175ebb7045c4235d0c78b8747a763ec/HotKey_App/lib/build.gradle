@@ -1,0 +1,11 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //    implementation project(':app')
+    implementation files('/Users/timm/Downloads/HotKey_App/app/libs/kryonet-2.21/jars/production/kryonet-2.21.jar')
+    implementation files('/Users/timm/Downloads/HotKey_App/app/libs/kryonet-2.21/jars/production/kryo-2.20.jar')
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

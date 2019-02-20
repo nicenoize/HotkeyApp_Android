@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_about"
+        android:icon="@mipmap/ic_person_black_24dp"
+        android:title="About"/>
+
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@mipmap/ic_settings_black_24dp"
+        android:title="Enable WiFi"/>
+
+    <item
+        android:id="@+id/nav_quit"
+        android:icon="@mipmap/ic_do_not_disturb_black_24dp"
+        android:title="Quit" />
+    <group />
+
+</menu>

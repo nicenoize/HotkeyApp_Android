@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="815.0" style="-fx-background-color: null;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HotKeyApp.controller.MainController">
+   <children>
+      <AnchorPane fx:id="menu_sub" layoutY="94.0" prefHeight="58.0" prefWidth="400.0" style="-fx-background-color: #3d4956;">
+         <children>
+            <ImageView fx:id="btn_general" fitHeight="32.0" fitWidth="32.0" layoutX="49.0" layoutY="13.0" onMouseEntered="#handleHoverBtnIn" onMouseExited="#handleHoverBtnOut" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/btn_settings.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_user" fitHeight="32.0" fitWidth="32.0" layoutX="139.0" layoutY="13.0" onMouseEntered="#handleHoverBtnIn" onMouseExited="#handleHoverBtnOut" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/btn_user.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_experimental" fitHeight="32.0" fitWidth="32.0" layoutX="229.0" layoutY="13.0" onMouseEntered="#handleHoverBtnIn" onMouseExited="#handleHoverBtnOut" onMousePressed="#handleButtonAction" opacity="0.91" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/btn_experimental.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_about" fitHeight="32.0" fitWidth="32.0" layoutX="319.0" layoutY="13.0" onMouseEntered="#handleHoverBtnIn" onMouseExited="#handleHoverBtnOut" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/btn_about.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menu_top" prefHeight="80.0" prefWidth="400.0" style="-fx-background-color: #3d4956;">
+         <children>
+            <ImageView fx:id="btn_open_menus" fitHeight="32.0" fitWidth="32.0" layoutX="37.0" layoutY="24.0" onMouseEntered="#handleHoverBtnIn" onMouseExited="#handleHoverBtnOut" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/btn_settings.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_minimize" fitHeight="32.0" fitWidth="32.0" layoutX="120.0" layoutY="24.0" onMouseEntered="#handleHoverBtnIn" onMouseExited="#handleHoverBtnOut" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/btn_minimize.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_off" fitHeight="32.0" fitWidth="32.0" layoutX="207.0" layoutY="24.0" onMouseEntered="#handleHoverBtnIn" onMouseExited="#handleHoverBtnOut" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/btn_off.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_start_server" fitHeight="45.0" fitWidth="45.0" layoutX="316.0" layoutY="17.0" onMouseEntered="#handleHoverBtnIn" onMouseExited="#handleHoverBtnOut" onMouseReleased="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/btn_logo.png" />
+               </image>
+            </ImageView>
+            <Separator layoutX="274.0" layoutY="14.0" opacity="0.08" orientation="VERTICAL" prefHeight="58.0" prefWidth="6.0" style="-fx-background-color: null;" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="menu_about" layoutY="150.0" prefHeight="452.0" prefWidth="400.0" style="-fx-background-color: #3d4956;">
+         <children>
+            <Line endX="360.0" startX="310.0" stroke="#eda678" strokeWidth="0.5" />
+            <Separator layoutX="32.0" layoutY="420.0" opacity="0.2" prefHeight="1.0" prefWidth="337.0" />
+            <JFXTextField fx:id="lbl_packet_passwd_visible" disable="true" focusColor="#eda678" layoutX="154.0" layoutY="256.0" prefHeight="29.0" prefWidth="211.0" style="-fx-background-color: #3d4956; -fx-text-fill: #ffffff;" unFocusColor="WHITE" visible="false" />
+            <Label layoutX="176.0" layoutY="73.0" text="HotKeyApp" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="200.0" layoutY="105.0" text="Version 1.0" textFill="WHITE">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="91.0" layoutY="221.0" prefHeight="15.0" prefWidth="106.0" text="Entwickler:" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="203.0" layoutY="221.0" prefHeight="117.0" prefWidth="190.0" text="Timm Dunker&#10;Sebastian Herrmann&#10;Thorsten Meier&#10;Alexander Stahl&#10;Sebastian Voigt&#10;" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="279.0" layoutY="405.0" text="All rights reserverd" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="83.0" layoutY="58.0">
+               <image>
+                  <Image url="@../images/btn_logo_hover.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="123.0" layoutY="428.0" text="© 2018 - HotKeyApp v1.0" textFill="WHITE">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menu_user" layoutY="150.0" prefHeight="452.0" prefWidth="400.0" style="-fx-background-color: #3d4956;">
+         <children>
+            <Line endX="180.0" startX="130.0" stroke="#eda678" strokeWidth="0.5" />
+            <Label alignment="TOP_LEFT" layoutX="30.0" layoutY="26.0" prefHeight="90.0" prefWidth="337.0" text="Wenn du anderen Nutzern eine Map für ein Programm zur Verfügung stellen möchtest, oder die Maps anderer Nutzer bewerten möchtest, benötigst du einen Account. Dieser ist kostenlos und die Registrierung ist in 10 Sekunden abgeschlossen, versprochen." textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <JFXCheckBox fx:id="cbx_account_exists" checkedColor="#eda678" layoutX="30.0" layoutY="135.0" onAction="#handleAccountAction" text="Ich habe bereits ein Konto" textFill="WHITE" unCheckedColor="#eba4787f">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="cbx_account_new" checkedColor="#eda678" layoutX="30.0" layoutY="165.0" onAction="#handleAccountAction" text="Neues Konto erstellen" textFill="WHITE" unCheckedColor="#eba4787f">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </JFXCheckBox>
+            <Label layoutX="30.0" layoutY="219.0" text="Benutzername" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="lbl_username" focusColor="#eda678" layoutX="152.0" layoutY="213.0" prefHeight="29.0" prefWidth="211.0" promptText="Benutzername" style="-fx-background-color: #3d4956; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #cbcbcb;" unFocusColor="WHITE">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="lbl_userpasswd" focusColor="#eda678" layoutX="154.0" layoutY="256.0" prefHeight="29.0" prefWidth="211.0" promptText="Passwort" style="-fx-background-color: #3d4956; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #cbcbcb;" unFocusColor="WHITE">
+               <font>
+                  <Font size="12.0" />
+               </font></JFXPasswordField>
+            <Label layoutX="30.0" layoutY="262.0" text="Passwort" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <JFXCheckBox fx:id="cbx_user_show_pw" checkedColor="#eda678" layoutX="30.0" layoutY="299.0" onMousePressed="#handleButtonAction" text="Passwort anzeigen" textFill="WHITE" unCheckedColor="#eba4787f">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXButton fx:id="btn_save_user_ghost" disable="true" layoutX="239.0" layoutY="366.0" onMouseClicked="#createUser" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: #eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Option wählen" textFill="WHITE" />
+            <JFXButton fx:id="btn_cancel_user" layoutX="30.0" layoutY="366.0" onMouseClicked="#handleButtonAction" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: #515d6d; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Abbrechen" textFill="WHITE" />
+            <Separator layoutX="32.0" layoutY="420.0" opacity="0.2" prefHeight="1.0" prefWidth="337.0" />
+            <JFXTextField fx:id="lbl_userpasswd_visible" focusColor="#eda678" layoutX="154.0" layoutY="256.0" prefHeight="29.0" prefWidth="211.0" style="-fx-background-color: #3d4956; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #cbcbcb;" unFocusColor="WHITE" visible="false">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btn_save_user_create" layoutX="239.0" layoutY="366.0" onMouseClicked="#createUser" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: #eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Konto erstellen" textFill="WHITE" visible="false" />
+            <JFXButton fx:id="btn_save_user_load" layoutX="239.0" layoutY="366.0" onMouseClicked="#createUser" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: #eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Anmelden" textFill="WHITE" visible="false" />
+            <Label layoutX="123.0" layoutY="428.0" text="© 2018 - HotKeyApp v1.0" textFill="WHITE">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="mapsPane" layoutX="416.0" layoutY="94.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="400.0" style="-fx-background-color: #3d4956;">
+         <children>
+            <AnchorPane fx:id="menu_programm" layoutY="58.0" prefHeight="446.0" prefWidth="400.0" style="-fx-background-color: #3d4956;">
+               <children>
+                  <Line endX="230.0" startX="180.0" stroke="#eda678" strokeWidth="0.5" />
+                  <JFXButton fx:id="btn_select_choose_programm" layoutX="239.0" layoutY="366.0" onMouseClicked="#handleButtonAction" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: #eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Auswählen" textFill="WHITE" />
+                  <JFXButton fx:id="btn_cancel_choose_programm" layoutX="30.0" layoutY="366.0" onMouseClicked="#handleButtonAction" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: #515d6d; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Abbrechen" textFill="WHITE" />
+                  <Separator layoutX="32.0" layoutY="420.0" opacity="0.2" prefHeight="1.0" prefWidth="337.0" />
+                  <Label layoutX="123.0" layoutY="428.0" text="© 2018 - HotKeyApp v1.0" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTreeTableView fx:id="mapTreeView" layoutX="31.0" layoutY="55.0" prefHeight="283.0" prefWidth="336.0" showRoot="false" style="-fx-background-color: #3d4956;" />
+                  <JFXTextField fx:id="mapFilter" focusColor="#eda678" layoutX="32.0" layoutY="18.0" prefHeight="23.0" prefWidth="219.0" promptText="Suche" style="-fx-background-color: #3d4956; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #cbcbcb;" unFocusColor="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="head_maps" prefHeight="58.0" prefWidth="400.0" style="-fx-background-color: #3d4956;">
+               <children>
+                  <ImageView fx:id="icon_maps" fitHeight="32.0" fitWidth="32.0" layoutX="184.0" layoutY="13.0" onMouseEntered="#handleHoverBtnIn" onMouseExited="#handleHoverBtnOut" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/btn_map.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="head_details" prefHeight="58.0" prefWidth="400.0" style="-fx-background-color: #3d4956;">
+               <children>
+                  <ImageView fx:id="icon_details" fitHeight="32.0" fitWidth="32.0" layoutX="187.0" layoutY="13.0">
+                     <image>
+                        <Image url="@../images/icon_details.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="head_programm" prefHeight="58.0" prefWidth="400.0" style="-fx-background-color: #3d4956;">
+               <children>
+                  <ImageView fx:id="icon_programm" fitHeight="32.0" fitWidth="32.0" layoutX="188.0" layoutY="13.0">
+                     <image>
+                        <Image url="@../images/icon_programm.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="menu_details" layoutY="58.0" prefHeight="446.0" prefWidth="400.0" style="-fx-background-color: #3d4956;">
+               <children>
+                  <Line endX="230.0" startX="180.0" stroke="#eda678" strokeWidth="0.5" />
+                  <JFXButton fx:id="btn_cancel_details_programm" layoutX="32.0" layoutY="368.0" onMouseClicked="#handleButtonAction" prefHeight="31.0" prefWidth="336.0" style="-fx-background-color: #515d6d; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Abbrechen" textFill="WHITE" />
+                  <Separator layoutX="32.0" layoutY="420.0" opacity="0.2" prefHeight="1.0" prefWidth="337.0" />
+                  <Label layoutX="123.0" layoutY="428.0" text="© 2018 - HotKeyApp v1.0" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="tf_programmname" editable="false" focusColor="#eda678" layoutX="167.0" layoutY="15.0" prefHeight="23.0" prefWidth="203.0" promptText="Programmname" style="-fx-background-color: #3d4956; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #cbcbcb;" unFocusColor="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="tf_author" editable="false" focusColor="#eda678" layoutX="167.0" layoutY="57.0" prefHeight="23.0" prefWidth="203.0" promptText="Author" style="-fx-background-color: #3d4956; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #cbcbcb;" unFocusColor="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="tf_voteworks" editable="false" focusColor="#eda678" layoutX="167.0" layoutY="141.0" prefHeight="23.0" prefWidth="203.0" promptText="Vote Works" style="-fx-background-color: #3d4956; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #cbcbcb;" unFocusColor="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="tf_votewish" editable="false" focusColor="#eda678" layoutX="167.0" layoutY="183.0" prefHeight="23.0" prefWidth="203.0" promptText="Vote Wish" style="-fx-background-color: #3d4956; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #cbcbcb;" unFocusColor="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="tf_stable" editable="false" focusColor="#eda678" layoutX="167.0" layoutY="225.0" prefHeight="23.0" prefWidth="203.0" promptText="Stable" style="-fx-background-color: #3d4956; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #cbcbcb;" unFocusColor="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="tf_keys" editable="false" focusColor="#eda678" layoutX="167.0" layoutY="267.0" prefHeight="23.0" prefWidth="203.0" promptText="Anzahl der Keys" style="-fx-background-color: #3d4956; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #cbcbcb;" unFocusColor="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label alignment="TOP_LEFT" layoutX="30.0" layoutY="19.0" prefHeight="17.0" prefWidth="161.0" text="Programmname" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="30.0" layoutY="61.0" prefHeight="17.0" prefWidth="161.0" text="Author" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="30.0" layoutY="103.0" prefHeight="17.0" prefWidth="161.0" text="Contributes" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="30.0" layoutY="145.0" prefHeight="17.0" prefWidth="161.0" text="Vote Works" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="30.0" layoutY="187.0" prefHeight="17.0" prefWidth="161.0" text="Vote Wish" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="30.0" layoutY="229.0" prefHeight="17.0" prefWidth="161.0" text="Stable" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="30.0" layoutY="271.0" prefHeight="17.0" prefWidth="161.0" text="Anzahl der Keys" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextArea fx:id="ta_contributes" editable="false" focusColor="#eda678" layoutX="167.0" layoutY="99.0" prefHeight="23.0" prefWidth="203.0" promptText="Contributes" style="-fx-background-color: #3d4956; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #cbcbcb;" unFocusColor="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </JFXTextArea>
+                  <JFXButton fx:id="btn_vote_work" layoutX="241.0" layoutY="313.0" onMouseClicked="#handleButtonAction" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: #eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Vote Works" textFill="WHITE" />
+                  <JFXButton fx:id="btn_vote_wish" layoutX="32.0" layoutY="313.0" onMouseClicked="#handleButtonAction" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: #eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Vote Wish" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="menu_maps" layoutY="58.0" prefHeight="452.0" prefWidth="400.0" style="-fx-background-color: #3d4956;">
+               <children>
+                  <Line endX="230.0" startX="180.0" stroke="#eda678" strokeWidth="0.5" />
+                  <Label alignment="TOP_LEFT" layoutX="200.0" layoutY="26.0" prefHeight="45.0" prefWidth="163.0" text="Sie verändern die aktuelle Map, wenn die Checkbox nicht ausgewählt ist" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btn_save_map" layoutX="239.0" layoutY="366.0" onMouseClicked="#handleButtonAction" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: #eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Lokal Speichern" textFill="WHITE" />
+                  <JFXButton fx:id="btn_cancel_map" layoutX="30.0" layoutY="366.0" onMouseClicked="#handleButtonAction" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: #515d6d; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Abbrechen" textFill="WHITE" />
+                  <Separator layoutX="32.0" layoutY="420.0" opacity="0.2" prefHeight="1.0" prefWidth="337.0" />
+                  <Label layoutX="123.0" layoutY="428.0" text="© 2018 - HotKeyApp v1.0" textFill="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXCheckBox fx:id="cbx_new_map" checkedColor="#eda678" layoutX="30.0" layoutY="26.0" text="Neue Map erstellen" textFill="WHITE" unCheckedColor="#eba4787f">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXTextField fx:id="tf_sc" disable="false" focusColor="#eda678" layoutX="204.0" layoutY="203.0" prefHeight="23.0" prefWidth="163.0" promptText="Shortcut" style="-fx-background-color: #3d4956; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #cbcbcb;" unFocusColor="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label alignment="TOP_LEFT" layoutX="200.0" layoutY="118.0" prefHeight="29.0" prefWidth="163.0" text="Programmname der Map" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="30.0" layoutY="159.0" prefHeight="32.0" prefWidth="340.0" text="Bitte geben Sie einen Aktionsnamen ein. Vergeben Sie dann Ihren Shortcut." textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="tf_maps_prog" disable="true" focusColor="#eda678" layoutX="32.0" layoutY="109.0" prefHeight="23.0" prefWidth="150.0" promptText="Programm" style="-fx-background-color: #3d4956; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #cbcbcb;" unFocusColor="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="tf_maps_aktion" disable="false" focusColor="#eda678" layoutX="34.0" layoutY="203.0" prefHeight="23.0" prefWidth="150.0" promptText="Aktion" style="-fx-background-color: #3d4956; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #cbcbcb;" unFocusColor="WHITE">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="btn_post_map" disable="true" layoutX="240.0" layoutY="308.0" onMouseClicked="#handleButtonAction" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: #eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Veröffentlichen" textFill="WHITE" />
+                  <JFXButton fx:id="btn_add_hotkey" layoutX="32.0" layoutY="249.0" onMouseClicked="#handleButtonAction" prefHeight="31.0" prefWidth="337.0" style="-fx-background-color: #eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Kommando hinzufügen" textFill="WHITE" />
+                  <JFXCheckBox fx:id="cbx_release_map" checkedColor="#eda678" layoutX="32.0" layoutY="299.0" text="Diese Map veröffentlichen" textFill="WHITE" unCheckedColor="#eba4787f">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="cbx_extend_map" checkedColor="#eda678" disable="true" layoutX="32.0" layoutY="330.0" text="bestehende Map erweitern" textFill="WHITE" unCheckedColor="#eba4787f">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </JFXCheckBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menu_experimental" layoutY="150.0" prefHeight="452.0" prefWidth="400.0" style="-fx-background-color: #3d4956;">
+         <children>
+            <Line endX="265.0" startX="215.0" stroke="#eda678" strokeWidth="0.5" />
+            <Label alignment="TOP_LEFT" layoutX="31.0" layoutY="51.0" prefHeight="73.0" prefWidth="337.0" text="Hier kannst du eigene Maps für nicht unterstützte Programme erstellen. Du kannst diese auch für die Community freigeben, musst es aber nicht." textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btn_cancel_experimental" layoutX="30.0" layoutY="366.0" onMouseClicked="#handleButtonAction" prefHeight="31.0" prefWidth="337.0" style="-fx-background-color: #515d6d; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Abbrechen" textFill="WHITE" />
+            <Separator layoutX="32.0" layoutY="420.0" opacity="0.2" prefHeight="1.0" prefWidth="337.0" />
+            <JFXToggleButton fx:id="toggle_load_experimental_map" layoutX="280.0" layoutY="186.0" onMousePressed="#handleToggleButton" text="An" textFill="WHITE" toggleColor="#eda478" toggleLineColor="#eba278e1">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </JFXToggleButton>
+            <Label layoutX="31.0" layoutY="26.0" text="Eigene Map erstellen" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="206.0" text="Verwende lokale Map" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="31.0" layoutY="231.0" prefHeight="73.0" prefWidth="337.0" text="Wenn du eigenen oder von anderen Leuten erstellte Maps nutzen möchtest, die nicht der gesamten Community zur Verfügung stehen, kannst das hier tun." textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btn_newmap" layoutX="26.0" layoutY="124.0" onMouseClicked="#handleButtonAction" prefHeight="31.0" prefWidth="337.0" style="-fx-background-color: #eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Map erstellen/bearbeiten/veröffentlichen" textFill="WHITE" />
+            <JFXButton fx:id="btn_load_experimental" disable="true" layoutX="32.0" layoutY="302.0" onMouseClicked="#handleButtonAction" prefHeight="31.0" prefWidth="337.0" style="-fx-background-color: #eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Lade lokale Map" textFill="WHITE" />
+            <Label layoutX="123.0" layoutY="428.0" text="© 2018 - HotKeyApp v1.0" textFill="WHITE">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="menu_general" layoutY="150.0" prefHeight="452.0" prefWidth="400.0" style="-fx-background-color: #3d4956;">
+         <children>
+            <Line endX="90.0" startX="40.0" stroke="#eda678" strokeWidth="0.5" />
+            <Label layoutX="30.0" layoutY="26.0" text="AUTO-UPDATE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="30.0" layoutY="56.0" prefHeight="52.0" prefWidth="211.0" text="Überprüft ob eine neue Version &#10;vorhanden ist und lädt diese herunter." textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <JFXToggleButton fx:id="toggle_autoupdate" layoutX="281.0" layoutY="30.0" text="An" textFill="WHITE" toggleColor="#eda478" toggleLineColor="#eba278e1">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </JFXToggleButton>
+            <JFXButton fx:id="btn_save_general" layoutX="239.0" layoutY="366.0" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: #eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Speicher Config" textFill="WHITE" />
+            <JFXButton fx:id="btn_cancel_general" layoutX="30.0" layoutY="366.0" onMouseClicked="#handleButtonAction" prefHeight="31.0" prefWidth="129.0" style="-fx-background-color: #515d6d; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Abbrechen" textFill="WHITE" />
+            <Separator layoutX="32.0" layoutY="420.0" opacity="0.2" prefHeight="1.0" prefWidth="337.0" />
+            <Label layoutX="123.0" layoutY="428.0" text="© 2018 - HotKeyApp v1.0" textFill="WHITE">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btn_choose_programm" layoutX="30.0" layoutY="229.0" prefHeight="31.0" prefWidth="337.0" style="-fx-background-color: #eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="Programm auswählen" textFill="WHITE" />
+            <Label alignment="TOP_LEFT" layoutX="30.0" layoutY="157.0" prefHeight="17.0" prefWidth="161.0" text="Ausgewähltes Programm" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tf_selected_programm" disable="true" editable="false" focusColor="#eda678" layoutX="30.0" layoutY="180.0" prefHeight="29.0" prefWidth="338.0" promptText="nichts ausgwählt" style="-fx-background-color: #3d4956; -fx-text-fill: #ffffff; -fx-prompt-text-fill: #cbcbcb;" unFocusColor="WHITE">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btn_execute_programm" disable="true" layoutX="30.0" layoutY="270.0" onMouseClicked="#handleButtonAction" prefHeight="31.0" prefWidth="337.0" style="-fx-background-color: #eda678; -fx-border-radius: 5em; -fx-background-radius: 5em;" text="HotKeyMap - Details" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
